@@ -8,7 +8,7 @@ W eksploratorze rozwiązań, dla każdego ze swoich plików z kodem w katalogu C
 
 Kopiuj do katalogu wyjściowego → Zawsze kopiuj
 
-(https://i.ibb.co/Rzx9fjw/eksploratorrozwiazan.png)
+![eksplorator](https://i.ibb.co/Rzx9fjw/eksploratorrozwiazan.png)
 
 ### Proces kompilacji
 
@@ -25,7 +25,7 @@ Jeśli w parametrach wywołań pominiemy nazwę naszej biblioteki, to aplikacji 
 
 Oczywiście kompilację można też przeprowadzić z poziomu środowiska VS. W tym celu wystarczy we właściwościach projektu, w sekcji Debug, wprowadzić nasze parametry wywołania aplikacji:
 
-(https://i.ibb.co/Lpm6Jjr/ustawieniaprojektu.png)
+![ustawienia](https://i.ibb.co/Lpm6Jjr/ustawieniaprojektu.png)
 
 Jeśli aplikacja testowe napotka błędy podczas kompilacji, stosownie wypisze je podczas tego procesu. Przy kompilacji wielu plików, wystąpienie błędów w jednym z nich **nie przerwie procesu kompilacji**.
 
