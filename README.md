@@ -1,32 +1,14 @@
 # Środowisko tworzenia węzłów definiowalnych
 
-### Wymagania
+Środowiskiem programowania węzłów jest Visual Studio (obecnie wersja 2017). Projekt testowy można uruchamiać w tym środowisku w celu testowania kodów. W  projekcie można produkować gotowe skompilowane biblioteki, które umożliwią szybsze uruchamianie się tych węzłów w aplikacji COR.
 
-Testowanie węzłów w VS w projekcie testowym odbywa się w prosty sposób, czyli przez uruchamianie projektu (kompilacje) pod Debugerem. W oknie aplikacji testowej prezentowane są rezultaty testów tych węzłów. Kompilowanie do bibliotek odbywa się bardzo podobnie.
+# Proces kompilacji
 
-W eksploratorze rozwiązań, dla każdego ze swoich plików z kodem w katalogu Codes projektu, należy we właściwościach wybrać opcję:
+Solucja CodedNodeDesigner zawiera dwa projekty:
 
-Kopiuj do katalogu wyjściowego → Zawsze kopiuj
+1. CodedNode.csproj - projekt ten zawiera kod tworzonego węzła definiowalnego. Programista w tym projekcie korzystając z przykładowego węzła ExampleCodedNode.cs - tworzy własną klasę “VisionDynamic”.
+2. CodedNodeProj.csproj - projekt ten zawiera środowisko uruchomieniowe węzła definiowalnego w postaci aplikacji konsolowej, która dynamicznie tworzy klasę “VisionDynamic” zawartą w skompilowanej DLLce CodedNode.csproj, i pozwala na wywołanie na niej metod typu “Consume” w celu symulowania działania tego węzła.
 
-![eksplorator](https://i.ibb.co/Rzx9fjw/eksploratorrozwiazan.png)
+ W aplikacji CFG możemy wykorzystać czysty kod węzła definiowalnego, lub - zastosować kod kompilowany dynamicznie w postaci CodedNode.dll (oczywiście można zmieniać jej nazwę).
 
-### Proces kompilacji
-
-Aby skompilować naszą bibliotekę “ExampleCodedNode.cs”, skompilowaną wcześniej aplikację CodedNodeTester uruchomić z linii poleceń z parametrami:
-
- `CodedNodeTester.exe -c ExampleCodeNode`
-
-Spowoduje to uruchomienie aplikacja testowej w trybie kompilacji. W katalogu docelowym tej aplikacji (znajduje się w katalogu projektu:“CodedNodeTester\bin\Debug”) aplikacja utworzy dwa katalogi:
-
-* Codes - tutaj kopiowane są pliki z kodami węzłów, można do niej dorzucać dodatkowe pliki, nie uwzględnione w projekcie,
-* Compiled - tutaj wylądują skompilowane pliki bibliotek. Te gotowe biblioteki dostarczamy do repozytorium mediów w aplikacji COR.
-
-Jeśli w parametrach wywołań pominiemy nazwę naszej biblioteki, to aplikacji skompiluje wszystkie pliki znajdujące się w katalogu Codes (opcja ułatwiająca życie przy przejściu na tę wersję).
-
-Oczywiście kompilację można też przeprowadzić z poziomu środowiska VS. W tym celu wystarczy we właściwościach projektu, w sekcji Debug, wprowadzić nasze parametry wywołania aplikacji:
-
-![ustawienia](https://i.ibb.co/Lpm6Jjr/ustawieniaprojektu.png)
-
-Jeśli aplikacja testowe napotka błędy podczas kompilacji, stosownie wypisze je podczas tego procesu. Przy kompilacji wielu plików, wystąpienie błędów w jednym z nich **nie przerwie procesu kompilacji**.
-
-W aplikacji CFG możemy wykorzystać czysty kod węzła definiowalnego, lub - zastosować kod kompilowany dynamicznie.
+Jeśli nasz kod będzie korzystał z bibliotek innych firm/organizacji (np. poprzez Nuget), należy pamiętać że jeśli te dllki są również używane w Nazce - muszą być one zgodne wersją. Pozostałe DLLki których nie ma w Nazce należy skopiować do katalogów Nazci, by zostały prawidłowo wpięte do węzła definiowalnego podczas jego uruchamiania. 
