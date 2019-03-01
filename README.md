@@ -11,4 +11,4 @@ Solucja CodedNodeDesigner zawiera dwa projekty:
 
  W aplikacji CFG możemy wykorzystać czysty kod węzła definiowalnego, lub - zastosować kod kompilowany dynamicznie w postaci CodedNode.dll (oczywiście można zmieniać jej nazwę).
 
-Jeśli nasz kod będzie korzystał z bibliotek innych firm/organizacji (np. poprzez Nuget), należy pamiętać że jeśli te dllki są również używane w Nazce - muszą być one zgodne wersją. Pozostałe DLLki których nie ma w Nazce należy skopiować do katalogów Nazci, by zostały prawidłowo wpięte do węzła definiowalnego podczas jego uruchamiania. 
+Jeśli nasz kod będzie korzystał z bibliotek innych firm/organizacji (np. poprzez Nuget), należy pamiętać że jeśli te dllki są również używane w Nazce - muszą być one zgodne wersją. Pozostałe DLLki których nie ma w Nazce należy skopiować do katalogów Nazci, by zostały prawidłowo wpięte do węzła definiowalnego podczas jego uruchamiania.  
