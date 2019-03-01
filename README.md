@@ -4,7 +4,7 @@
 
 # Proces kompilacji
 
-Solucja CodedNodeDesigner zawiera dwa projekty:
+Solucja CodedNodeDesigner zawiera dwa projekty: 
 
 1. CodedNode.csproj - projekt ten zawiera kod tworzonego węzła definiowalnego. Programista w tym projekcie korzystając z przykładowego węzła ExampleCodedNode.cs - tworzy własną klasę “VisionDynamic”.
 2. CodedNodeProj.csproj - projekt ten zawiera środowisko uruchomieniowe węzła definiowalnego w postaci aplikacji konsolowej, która dynamicznie tworzy klasę “VisionDynamic” zawartą w skompilowanej DLLce CodedNode.csproj, i pozwala na wywołanie na niej metod typu “Consume” w celu symulowania działania tego węzła.
