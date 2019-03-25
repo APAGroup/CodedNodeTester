@@ -2,29 +2,26 @@
 using System.Reflection;
 using Vision20.Commons.NodeManagement;
 
-namespace CodedNodeTester
+namespace NazcaMock
 {
     internal class Program
     {
-        public void OnProduce(object o, CodedNodeProductEventArgs arg)
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"{arg.Value} (on {arg.PinName})");
-            Console.ResetColor();
-        }
-
         private static void Main(string[] args)
         {
-            Console.WriteLine("Ładowanie assembly...");
-            var cnc = Assembly.LoadFrom(@"..\..\..\CodedNode\bin\debug\CodedNode.dll");
-            //Przed uruchomieniem tego porojektu NIE ZAPOMNIJ skompilować ręcznie CodedNode,
-            //bo wiązania między projektami są całkowicie dynamiczne i VS tego za Ciebie nie zrobi
+            Console.WriteLine("MOCK Systemu Nazca - użycie wezłów dynamicznie ładowanych");
+            Console.WriteLine("Ładowanie CodedNoda...");
+            //Przygotowanie instancji węzła
+            var cnc = Assembly.LoadFrom(@"..\\..\\..\\CodedNode\\bin\\Debug\\CodedNode.dll");
+            var demo = PrepareCodedNode(cnc, 3, 1);
 
             //Tu zaczyna się testowanie węzła
-            Console.WriteLine("Test węzła dynamicznie ładowanego...");
-            var demo = PrepareCodedNode(cnc, 1, 1);
-            demo?.Consume(new CodedQuantConsumeData("IN1", CodedDataQuantSource.Link), "23");
-            demo?.Consume(new CodedQuantConsumeData("IN1", CodedDataQuantSource.Link), "to jest tester");
+            Console.WriteLine("Start odliczania w dół od 10");
+            demo?.Consume(new CodedQuantConsumeData("IN1", CodedDataQuantSource.Link), 10d);
+
+            Console.WriteLine("Wysłano wartosc 23 do sumowania");
+            demo?.Consume(new CodedQuantConsumeData("IN2", CodedDataQuantSource.Link), 23d);
+            Console.WriteLine("Wysłano wartosc 33 jako drugi argument");
+            demo?.Consume(new CodedQuantConsumeData("IN3", CodedDataQuantSource.Link), 33d);
 
             Console.ReadKey();
         }
@@ -37,7 +34,7 @@ namespace CodedNodeTester
             demoNode.ValueProduced += delegate (object o, CodedNodeProductEventArgs arg)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"{arg.Value} (on {arg.PinName})");
+                    Console.WriteLine($"Otrzymano wartość {arg.Value} na pinie {arg.PinName}");
                     Console.ResetColor();
                 };
 
@@ -54,7 +51,7 @@ namespace CodedNodeTester
                 OutputCount = outPins,
                 TraceId = "[CodedNode: NodeUnderConstruction]",
                 NodeName = "Node name",
-                Flavor = "TEXT"
+                Flavor = "NUM"
             };
             demoNode.Init();
 

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E4DB628F-2591-498E-AA53-F461E1102176}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CodedNodeTester</RootNamespace>
-    <AssemblyName>CodedNodeTester</AssemblyName>
+    <RootNamespace>NazcaMock</RootNamespace>
+    <AssemblyName>NazcaMock</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,6 +51,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodedNode\CodedNode.csproj">
+      <Project>{b5397b7f-9887-44d1-9adc-dbbd56b50713}</Project>
+      <Name>CodedNode</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

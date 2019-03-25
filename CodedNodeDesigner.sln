@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodedNode", "CodedNode\CodedNode.csproj", "{B5397B7F-9887-44D1-9ADC-DBBD56B50713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodedNodeTester", "CodedNodeTester\CodedNodeTester.csproj", "{E4DB628F-2591-498E-AA53-F461E1102176}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NazcaMock", "NazcaMock\NazcaMock.csproj", "{E4DB628F-2591-498E-AA53-F461E1102176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodedNodeTests", "CodedNodeTests\CodedNodeTests.csproj", "{FFB33375-EC94-4B49-8A32-72DF7776017E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E4DB628F-2591-498E-AA53-F461E1102176}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4DB628F-2591-498E-AA53-F461E1102176}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4DB628F-2591-498E-AA53-F461E1102176}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB33375-EC94-4B49-8A32-72DF7776017E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB33375-EC94-4B49-8A32-72DF7776017E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB33375-EC94-4B49-8A32-72DF7776017E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB33375-EC94-4B49-8A32-72DF7776017E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
