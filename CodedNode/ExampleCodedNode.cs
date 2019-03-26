@@ -9,6 +9,16 @@ Ten przykładowy węzeł ma dwie główne funkcje: odliczanie w dół od podanej
 Zaprojektowany do podawania datakwantów typu Num
 Po podaniu wartości na IN1, zaczyna w osobnym wątku odliczać od niej do zera i wystawiać te liczby na OUT1
 Po dostarczeniu składników na IN2 i IN3, wyprowadza na OUT2 ich sumę. Obliczenia są uruchamiane podaniem drugiego składnika - na IN3
+
+Jeżeli węzeł realizuje bardziej złożone operacje, a szczególnie takie, które wymagają czasu, jego silnik powinien 
+być odseparowany od metody Consume(). W przeciwnym przypadku, taki węzeł będzie zatrzymywał kontroler logiki Nazca
+a przez to spowalniał cały system. W szczególnych przypadkach może doprowadzić do jego całkowitego zatrzymania. 
+Separacja może być wykonana np. za pomocą kolejki, do której zadania dostarcza Consume() oraz osobnego wątka 
+pobierającego je z tej kolejki i realizującego we własnym tempie. 
+
+W przypadku bardzo prostych węzłów, których kod sprowadza się tylko do tej jednej klasy, można użyć uproszczonej
+metody umieszczania ich w Nazca - bezpośrednio w postaci kodu źródłowego, zamiast biblioteki *.dll. Wtedy wystarczy
+do konfiguracji węzła skopiować całą zawartość tego pliku. 
 */
 
 public class VisionDynamic : CodedNodeBase
