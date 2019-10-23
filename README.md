@@ -13,4 +13,6 @@ Solucja CodedNodeDesigner zawiera trzy projekty:
 
  W konfiguracji węzła po stronie Nazca można wykorzystać bezpośrednio kod źródłowy węzła definiowalnego, albo zastosować kod kompilowany dynamicznie w postaci CodedNode.dll. Nazwę biblioteki można zmienić, w zależności od potrzeb. 
 
-Jeśli kod będzie korzystał z dodatkowych bibliotek (np. poprzez Nuget), należy je dostarczyć do Nazca razem z kodem węzła tak, żeby mogły być prawidłowo załadowane podczas jego uruchamiania. Jeżeli bibilioteki są już używane w Nazca, albo kilka węzłów niezależnie wykorzystuje te same, muszą być zgodne co do wersji. 
+Jeśli kod będzie korzystał z dodatkowych bibliotek (np. poprzez Nuget), należy je dostarczyć do Nazca razem z kodem węzła tak, żeby mogły być prawidłowo załadowane podczas jego uruchamiania. Jeżeli bibilioteki są już używane w Nazca, albo kilka węzłów niezależnie wykorzystuje te same, muszą być zgodne co do wersji.
+
+W przypadku niegodności wersji wspólnych bibliotek, wbudowane narzędzie PackagesComparator zasygnalizuje to błędem kompilacji i stworzy plik tekstowy w folderze projektu z informacją o nazwie pakietu i wersji niezgodnej z platformą Nazca.
