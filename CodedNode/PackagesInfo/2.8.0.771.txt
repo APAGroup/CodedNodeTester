@@ -262,7 +262,7 @@
     {
       "Packages": {
         "Advosol.OpcDaNet": "1.0.4",
-        "APA.iCal": "1.0.3",
+        "APA.iCal": "1.0.4",
         "C1.WPF": "1.0.2",
         "CommonServiceLocator": "2.0.4",
         "CsvHelper": "12.1.2",
@@ -372,7 +372,7 @@
     {
       "Packages": {
         "Advosol.OpcDaNet": "1.0.4",
-        "APA.iCal": "1.0.3",
+        "APA.iCal": "1.0.4",
         "APA.Nazca.DevelopVerify": "1.0.1",
         "C1.WPF": "1.0.2",
         "CommonServiceLocator": "2.0.4",
@@ -593,7 +593,7 @@
     {
       "Packages": {
         "Advosol.OpcDaNet": "1.0.4",
-        "APA.iCal": "1.0.3",
+        "APA.iCal": "1.0.4",
         "C1.WPF": "1.0.2",
         "cef.redist.x64": "3.3578.1863",
         "cef.redist.x86": "3.3578.1863",
