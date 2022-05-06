@@ -2391,7 +2391,6 @@
         "Mail.dll": "3.0.17312.2008",
         "Markdig": "0.26.0",
         "Markdig.Wpf": "0.5.0.1",
-        "MessagingToolkit": "1.8.3",
         "Microsoft.Azure.Amqp": "2.4.7",
         "Microsoft.Azure.EventHubs": "4.3.0",
         "Microsoft.Azure.Management.DataLake.Store": "2.2.1",
@@ -2573,7 +2572,7 @@
     {
       "Packages": {
         "C1.WPF": "1.0.2",
-        "CommonServiceLocator": "2.0.5",
+        "CommonServiceLocator": "2.0.4.0",
         "ControlzEx": "3.0.2.4",
         "EntityFramework": "6.4.4",
         "Extended.Wpf.Toolkit": "3.8.1",
@@ -2586,7 +2585,7 @@
         "Microsoft-WindowsAPICodePack-Core": "1.1.3.3",
         "Microsoft-WindowsAPICodePack-Shell": "1.1.3.3",
         "NLog": "4.7.5",
-        "Notification.Wpf": "6.1.0.4",
+        "Notification.Wpf": "6.1.0.5",
         "Prism.Core": "7.1.0.431",
         "Prism.Unity": "7.1.0.431",
         "Prism.Wpf": "7.1.0.431",
@@ -2701,6 +2700,7 @@
         "System.Reactive.Runtime.Remoting": "4.4.1",
         "System.Reflection.Emit": "4.3.0",
         "System.Reflection.TypeExtensions": "4.5.1",
+        "System.Runtime": "4.1.2.0",
         "System.Runtime.CompilerServices.Unsafe": "6.0.0",
         "System.Runtime.InteropServices": "4.3.0",
         "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
